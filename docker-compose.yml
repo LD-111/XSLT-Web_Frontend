@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"  # Expose backend port within the container network
+    networks:
+      - app-network
+
+  frontend:
+    image: nginx:latest
+    ports:
+      - "5173:80"  # Map host port 5173 to container port 80
+    volumes:
+      - ./XSLT-Web_frontend/dist:/usr/share/nginx/html
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
