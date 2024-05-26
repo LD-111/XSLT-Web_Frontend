@@ -1,6 +1,9 @@
 # Use the official Node.js image
 FROM node:22.1.0
 
+# Install JDK
+RUN apt update && apt-get update && apt-get install -y default-jdk
+
 # Set the working directory
 WORKDIR /app
 
@@ -31,3 +34,4 @@ EXPOSE 3000
 
 # Command to start the backend server
 CMD ["node", "xslt-transformer.js"]
+
