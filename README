@@ -1,6 +1,6 @@
 # XSLT Web Application
 
-This repository contains a web application with a Node.js backend and an Nginx frontend. The application is containerized using Docker and Docker Compose.
+This repository contains a web application for running XSLT transformations with a Node.js backend and an Nginx frontend. The application is containerized using Docker and Docker Compose.
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
