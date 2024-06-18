@@ -37,6 +37,8 @@ The XSLT-Web_frontend/dist directory should contain the built frontend files.
 
 ## Build and Run the Containers
 
+Make sure all the related directories have the appropriate permissions.
+
 Build the Docker images:
 
 Navigate to the directory containing the docker-compose.yml file:
