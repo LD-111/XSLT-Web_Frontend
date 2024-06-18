@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   backend:
     image: agent111/xslt-web_frontend-backend:latest
@@ -16,6 +14,7 @@ services:
       - ./XSLT-Web_frontend/dist:/usr/share/nginx/html
     networks:
       - app-network
+    command: /bin/sh -c "chmod -R 755 /usr/share/nginx/html && nginx -g 'daemon off;'"
 
 networks:
   app-network:

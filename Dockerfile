@@ -29,6 +29,9 @@ RUN npm run build
 # Change back to the app directory
 WORKDIR /app
 
+# Set permissions for the frontend build directory
+RUN chmod -R 755 /app/frontend/dist
+
 # Expose the backend port (only accessible within the container network)
 EXPOSE 3000
 
